@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+    defaultConfig {
+        applicationId "com.gj.easybuy"
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode cfgs.versionCode
+        versionName cfgs.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+        debug {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    //输出打包文件名称
+    applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output ->
+                    def outputDir = new File("${project.buildDir.absolutePath}/outputs/apk/${variant.flavorName}/${variant.buildType.name}")
+                    def outputFileName = "app-${variant.flavorName}-${variant.buildType.name}-V${variant.versionName}.apk"
+                    // def outputFile = new File("$outputDir/$outputFileName")
+                    variant.packageApplicationProvider.get().outputDirectory = new File("$outputDir")
+                    output.outputFileName = outputFileName
+
+
+                    /*def outputFile = output.outputFile
+                    if (outputFile.name.contains("release")) {
+                        def fileName = "app_zarl_zhzy_${variant.versionName}_${variant.versionCode}" + "_${variant.name}.apk"
+                        output.outputFileName = new File("../release/", fileName)
+                    } else if (outputFile.name.contains("debug")) {
+                        def fileName = "app_zarl_zhzy_${variant.versionName}_${variant.versionCode}" + "_${variant.name}.apk"
+                        output.outputFileName = new File("../debug/", fileName)
+                    }*/
+            }
+    }
+
+}
+
+
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

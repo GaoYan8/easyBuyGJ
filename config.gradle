@@ -1,0 +1,17 @@
+ext {
+    cfgs = [
+            compileSdkVersion : 28,
+            buildToolsVersion : "28.0.3",
+            minSdkVersion : 17,
+            targetSdkVersion : 28,
+            versionCode : 1,
+            versionName : "1.0.0",
+
+            //open version control
+            version_recyclerview : "1.0.0",
+            version_appcompat    : "1.0.0",
+
+            version_constraintlayout : "1.1.3",
+            version_appcompat : "28.0.0"
+    ]
+}
