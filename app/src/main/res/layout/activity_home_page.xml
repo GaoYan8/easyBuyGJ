@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/DefaultHomeActivityStyle"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_home_page_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape_gradient_title">
+
+
+        <TextView
+            android:id="@+id/tv_home_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:text="@string/str_home_page"
+            android:textColor="@color/color_white_a1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--<ImageView
+            android:id="@+id/iv_home_page_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_home_page_title"
+            android:layout_alignBottom="@id/tv_home_page_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/app_show_margin_size_15"
+            android:scaleType="center"
+            android:src="@mipmap/img_message_notice_white" />-->
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/sr_homepage_slide"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false"
+        app:srlEnablePreviewInEditMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- banner -->
+                <com.gy.gylibrary.banner.Banner
+                    android:id="@+id/ban_homepage_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:banner_default_image="@mipmap/img_me_title_bar" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

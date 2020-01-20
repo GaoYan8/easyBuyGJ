@@ -10,6 +10,11 @@ android {
         versionCode cfgs.versionCode
         versionName cfgs.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
     buildTypes {
         release {
@@ -85,4 +90,32 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "androidx.recyclerview:recyclerview:${cfgs.version_recyclerview}"
+
+
+    //
+    implementation 'com.github.GaoYan8:GYFrame:1.7.6'
+
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //lombok
+    implementation 'org.projectlombok:lombok:1.18.8'  //添加lombok依赖
+    implementation 'org.glassfish:javax.annotation:10.0-b28' //java注解
+
+    //Android智能下拉刷新框架-SmartRefreshLayout
+    //1.1.0 API改动过大，老用户升级需谨慎 https://github.com/scwang90/SmartRefreshLayout/blob/master/art/md_property.md
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+
+    //baseAdapter
+    implementation 'com.zhy:base-rvadapter:3.0.3'
+    implementation 'com.zhy:base-adapter:3.0.3'
 }

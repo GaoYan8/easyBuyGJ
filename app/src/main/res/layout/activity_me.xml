@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gy.gylibrary.headzoomlayout.HeadZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hzl_me_zoomLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:headViewId="@id/fl_me_head"
+    app:maxDragDistance="2000"
+    app:maxZoomRatio="1.1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_me_head"
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <!-- 背景图片 -->
+            <ImageView
+                android:id="@+id/iv_me_head_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/default_theme_color"
+                android:scaleType="centerCrop" />
+
+            <!-- 头部布局 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_me_title_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="@string/str_me"
+                        android:textColor="@color/color_white_a1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_me_title_root">
+
+                    <com.gy.gylibrary.view.NiceImageView
+                        android:id="@+id/niv_me_user_head_portrait"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="@dimen/app_show_margin_size_15"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:scaleType="centerCrop"
+                        app:border_color="@color/color_white_a1"
+                        app:border_width="2dp"
+                        app:corner_radius="2dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_me_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/niv_me_user_head_portrait"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@id/niv_me_user_head_portrait"
+                        android:text="高京"
+                        android:textColor="@color/color_white_a1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_me_user_name"
+                        android:layout_alignLeft="@id/tv_me_user_name"
+                        android:layout_marginTop="10dp"
+                        android:text="女"
+                        android:textColor="@color/color_white_a1"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_me_user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="100dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="@dimen/app_show_margin_size_15"
+                        android:paddingBottom="20dp"
+                        android:src="@mipmap/img_arrow_white" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            style="@style/DefaultHomeActivityStyle"
+            android:background="@color/color_bg_gray_a1"
+            android:orientation="vertical">
+
+
+            <com.gj.easybuy.view.SelectCommonItemView
+                android:id="@+id/sciv_me_message_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:sciv_left_img="@mipmap/img_message_notice"
+                app:sciv_left_img_visible="true"
+                app:sciv_left_text="@string/str_me_message_notice"
+                app:sciv_line_visible="true" />
+
+            <com.gj.easybuy.view.SelectCommonItemView
+                android:id="@+id/sciv_me_system_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sciv_left_img="@mipmap/img_system_version"
+                app:sciv_left_img_visible="true"
+                app:sciv_left_text="@string/str_me_system_version"
+                app:sciv_line_visible="true"
+                app:sciv_right_img_visible="false" />
+
+            <com.gj.easybuy.view.SelectCommonItemView
+                android:id="@+id/sciv_me_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_background"
+                app:sciv_left_img="@mipmap/img_change_password"
+                app:sciv_left_img_visible="true"
+                app:sciv_left_text="@string/str_me_change_password"
+                app:sciv_line_visible="false" />
+
+            <TextView
+                android:id="@+id/tv_me_logout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_item_background"
+                android:gravity="center"
+                android:text="@string/str_logout"
+                android:textColor="@color/color_font_black_a1"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.gy.gylibrary.headzoomlayout.HeadZoomLayout>

@@ -3,4 +3,41 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- 默认主题颜色 -->
+    <color name="default_theme_color">#ff4e00</color>
+    <color name="default_theme_color_pressed">#FA7842</color>
+
+
+
+    <!-- 所有activity背景色颜色-->
+    <color name="activity_background_color">#ededed</color>
+
+    <!-- 底部tab按钮背景颜色-->
+    <color name="tab_bottom_background_color">#f6f6f6</color>
+
+    <color name="color_white_a1">#FFFFFF</color>
+
+
+    <!-- 横竖细线颜色 -->
+    <color name="color_bg_gray_b1">#e4e4e4</color>
+
+
+
+    <!-- 文字的颜色规范 -->
+    <color name="color_font_black_a1">#020202</color>
+    <color name="color_font_black_a3">#666666</color>
+    <color name="color_font_black_a4">#333333</color>
+
+
+    <!-- 背景灰色 -->
+    <color name="color_bg_gray_a1">#f3f3f3</color>
+    <color name="color_bg_gray_a2">#FAF8F8</color>
+
+
+
+    <!-- 文字提示灰色 -->
+    <color name="color_light_gray_b1">#868686</color>
+
+
 </resources>

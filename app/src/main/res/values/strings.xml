@@ -1,3 +1,69 @@
 <resources>
     <string name="app_name">easyBuyGJ</string>
+    <string name="internet_error">网络异常,请检查网络设置</string>
+    <string name="internet_service_error">服务器异常</string>
+    <string name="internet_no_service_error">服务器开小差了，请稍后再试</string>
+    <string name="str_data_analysis_error">数据解析异常，请稍后再试</string>
+    <string name="str_load">努力加载中...</string>
+    <string name="str_pattern_update">发现%1$d条更新</string>
+    <string name="str_cancel_dislike">撤消</string>
+    <string name="str_submit">提交</string>
+    <string name="str_setting">设置</string>
+    <string name="str_finish">完成</string>
+    <string name="str_confirm">确定</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_wait_perfect">待完善</string>
+    <string name="str_wait_select">待选择</string>
+    <string name="str_delete">删除</string>
+    <string name="str_update">修改</string>
+    <string name="str_photograph">拍照</string>
+    <string name="str_mobile_albums">从手机相册选择</string>
+    <string name="str_search">搜索</string>‘
+    <string name="str_more">更多</string>‘
+    <string name="str_no_data">暂无内容</string>
+    <string name="str_save_succeed">保存成功</string>
+    <string name="str_delete_succeed">删除成功</string>
+    <string name="str_draft">草稿</string>
+    <string name="str_save_draft">保存草稿</string>
+    <string name="str_operation_finish">操作完成</string>
+    <string name="str_operation_failed">操作失败</string>
+    <string name="str_completed">已完成</string>
+    <string name="str_yes">是</string>
+    <string name="str_no">否</string>
+    <string name="str_details">详情</string>
+
+    <!--  ============================登录注册=========================== -->
+    <string name="str_login">登录</string>
+    <string name="str_logout">退出登录</string>
+    <string name="login_username_hint">用户名登录</string>
+    <string name="str_login_username_hint">用户名</string>
+    <string name="str_login_password_hint">密码</string>
+    <string name="input_login_username_hint">请输入手机号</string>
+    <string name="input_login_password_hint">请输入密码</string>
+    <string name="str_login_succeed">登录成功</string>
+    <string name="str_account">账号</string>
+    <string name="str_original_password">原密码</string>
+    <string name="str_new_password">新密码</string>
+    <string name="str_confirm_password">确认密码</string>
+    <string name="str_input_original_password">填写原密码</string>
+    <string name="str_input_new_password">填写新密码</string>
+    <string name="str_input_confirm_password">再次填写确认密码</string>
+    <string name="str_input_matching_original_password">与原密码不匹配</string>
+    <string name="str_input_matching_new_password">请确定新密码是否一致</string>
+
+
+    <!--  ============================首页=========================== -->
+    <string name="str_home_page">首页</string>
+
+    <!--  ============================购物车=========================== -->
+    <string name="str_shopping_cart">购物车</string>
+
+
+    <!--  ============================我=========================== -->
+    <string name="str_me">个人中心</string>
+    <string name="str_me_message_notice">消息通知</string>
+    <string name="str_me_system_version">系统版本</string>
+    <string name="str_me_change_password">修改密码</string>
+    <string name="str_password_hint">你可以在此修改密码，修改完成后使用新密码登录系统。</string>
+
 </resources>

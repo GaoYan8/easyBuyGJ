@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_a1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1.0" />
+
+        <View
+            style="@style/LineHorizontal" />
+
+        <!-- 底部按钮 -->
+        <LinearLayout
+            android:id="@+id/buttom_bar_group"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/tab_bottom_background_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <!-- 首页 -->
+            <RelativeLayout style="@style/BottomTabStyle">
+                <ImageButton
+                    android:id="@+id/imgbtn_homepage"
+                    style="@style/ButtomTabImgBtn"
+                    android:background="@drawable/img_homepage_selector"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+
+            <!-- 购物车 -->
+            <RelativeLayout style="@style/BottomTabStyle">
+                <ImageButton
+                    android:id="@+id/imgbtn_shoppingcart"
+                    style="@style/ButtomTabImgBtn"
+                    android:background="@drawable/img_shoppingcart_selector"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+
+            <!-- 我 -->
+            <RelativeLayout style="@style/BottomTabStyle">
+                <ImageButton
+                    android:id="@+id/imgbtn_me"
+                    style="@style/ButtomTabImgBtn"
+                    android:background="@drawable/img_me_selector"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</TabHost>

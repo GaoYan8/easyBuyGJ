@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  点击选择条目 -->
+    <declare-styleable name="SelectCommonItemView">
+        <!--  左侧图片 -->
+        <attr name="sciv_left_img" format="reference" />
+        <!--  左侧图片隐藏 -->
+        <attr name="sciv_left_img_visible" format="boolean" />
+        <!--  左侧文字 -->
+        <attr name="sciv_left_text" format="string" />
+        <!--  右侧文字 -->
+        <attr name="sciv_right_text" format="string" />
+        <!--  右侧提示文字 -->
+        <attr name="sciv_right_hint_text" format="string" />
+        <!--  右侧提示文字颜色 -->
+        <attr name="sciv_right_hint_text_color" format="reference" />
+        <!--  右侧图片 -->
+        <attr name="sciv_right_img" format="reference" />
+        <!--  右侧图片隐藏 -->
+        <attr name="sciv_right_img_visible" format="boolean" />
+        <!--  下方细线隐藏 -->
+        <attr name="sciv_line_visible" format="boolean" />
+        <!--  下方细线左边距 -->
+        <attr name="sciv_line_margin_left" format="dimension" />
+        <!--  下方细线右边距 -->
+        <attr name="sciv_line_margin_right" format="dimension" />
+    </declare-styleable>
+
+
+
+
+</resources>
